@@ -22,7 +22,10 @@ class Ninja {
 
 class Sensei extends Ninja {
     constructor(name) {
-        super(name, 200, 10, 10)
+        super(name)
+        this.health=200;
+        this.speed=10;
+        this.strength=10;
         this.wisdom = 10;
     }
         //  speakWisdom =() => {super.drinkSake()};
