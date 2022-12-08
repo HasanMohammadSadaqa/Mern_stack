@@ -23,6 +23,7 @@ const FormInformation = (props) => {
             <input type="password" onChange={(e)=>setPassword(e.target.value)}/>
             <label>Confirm password: </label>
             <input type="password" onChange={(e)=> setConfirm(e.target.value)}/>
+            <input type="submit" value="submit"/>
             </form>
 
             <p>First Name: {fname}</p>
