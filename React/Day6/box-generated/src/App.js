@@ -1,20 +1,19 @@
+import React, { useState } from 'react'
 
-import { useState } from 'react';
 import './App.css';
 import Form from './component/Form';
-import Display from './component/Display'
+import Display from './component/Display';
+
 
 function App() {
-  const[colorVariable, setColorVariable]=useState([]);
-  const displayColor = (x) => {
-    // console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
-    setColorVariable([...colorVariable,x])
-    // console.log("helloooooooooooooooooo")
-  } 
+  const [colorVariable, setColorVariable] = useState([])
+  const displayColor = (x)=> {
+    setColorVariable([...colorVariable, x]);
+  }
   return (
     <div className="App">
-      <Form whatTheColor = {displayColor}></Form>
-      <Display inputColor ={colorVariable}></Display>
+      <Form whatColor={ displayColor }></Form>
+      <Display inputColor = {colorVariable}></Display>
     </div>
   );
 }

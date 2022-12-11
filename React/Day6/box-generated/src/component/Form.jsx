@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 
 const Form = (props) => {
-    const [color, setColor] = useState("")
-    const addingColor = (event) => {
+    const [color, setColor]= useState("")
+    
+    const addingColor= (event)=>{
         event.preventDefault();
-        props.whatTheColor(color);
+        props.whatColor(color)
     }
     return (
         <div>
             <form onSubmit={addingColor}>
-                <label>Color: </label>
-                <input type="text" onChange = { e => setColor(e.target.value) } />
-                <input type="submit" value="Add" />
+                <label>Color:</label>
+                <input type="text" onChange = { (e)=> setColor(e.target.value) }  />
+                <input type="submit" value="Add your color" />
             </form>
         </div>
     )
