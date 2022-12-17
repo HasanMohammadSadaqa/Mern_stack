@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { Router } from '@reach/router';
 import './App.css';
+import Welcome from './components/Welcome';
+import NumberOrWordStyling from './components/NumberOrWordStyling';
+import NumberOrWord from './components/NumberOrWord'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Welcome path='/home'></Welcome>
+        <NumberOrWord path='/:input'></NumberOrWord>
+        <NumberOrWordStyling path='/:input/:color/:bgcolor'></NumberOrWordStyling>
+      </Router>
     </div>
   );
 }
