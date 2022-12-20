@@ -6,6 +6,8 @@ const { faker } = require('@faker-js/faker');
 
 // this needs to be below the other code blocks
 app.listen( port, () => console.log(`Listening on port: ${port}`) );
+//i can write it like 
+// app.listen(8000);
 
 app.get("/api", (req, res) => {
     res.json({ message: "Hello World" });
@@ -23,7 +25,7 @@ const createUser = () => {
     }
     return newUser;
 }
-app.get("/api/users/new", (req,res)=>{
+app.psot("/api/users/new", (req,res)=>{
     res.json(createUser())
 })
 
@@ -41,11 +43,11 @@ const createCompany =() =>{
     }
 }
 
-app.get("/api/companies/new", (req,res)=>{
+app.post("/api/companies/new", (req,res)=>{
     res.json(createCompany());
 })
 
-app.get("/api/user/company", (req,res)=>{
+app.psot("/api/user/company", (req,res)=>{
     res.json({
         user: createUser(),
         company: createCompany(),
