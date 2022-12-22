@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/jokes_DB", {
+mongoose.connect("mongodb://127.0.0.1/jokes_DB", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 })
