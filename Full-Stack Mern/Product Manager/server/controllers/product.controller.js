@@ -19,3 +19,4 @@ module.exports.findAllPoducts = (req, res) => {
         .then(allProduct => res.json(allProduct))
         .catch(err => res.json({message:"Somthing went wrong", errors:err}))
 }
+
