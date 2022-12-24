@@ -20,3 +20,10 @@ module.exports.findAllPoducts = (req, res) => {
         .catch(err => res.json({message:"Somthing went wrong", errors:err}))
 }
 
+//method to find specific product
+module.exports.findSpecificProduct = (req, res) => {
+    Product.findOne({_id: req.params.id})
+        .then(specificProduct => res.json(specificProduct))
+        .catch(err => res.json(err))
+}
+
