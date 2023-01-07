@@ -1,0 +1,22 @@
+In Back End:
+first:
+you have to make your package.json:
+npm init -y 
+
+second: install these:
+
+1)Express ===> npm i express
+2) nodemon===> npm install -g nodemon
+3)mongose ===> npm install mongoose express
+4)cors ===> npm install cors ===> actually this is in front end but it will be in server.js so it's ok!!
+
+
+In Front End:
+ first: create react app 
+===> npx create-react-app client
+second you have to install:
+1) reach router:
+==?  npm install @reach/router
+
+2)Axios:
+npm i axios
